@@ -1,0 +1,3 @@
+class RamenController < ApplicationController
+  
+end
