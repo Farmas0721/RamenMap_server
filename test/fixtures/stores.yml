@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: かりんとう
+  adress: 北海道函館市花園町２４−２１
+  yubin: '041-0843'
+  num: 0138-55-8858
+  code: 1
+
+two:
+  name: らーめん 炙
+  adress: 北海道函館市美原５丁目３９−１
+  yubin: '041-0806'
+  num: 0138-47-6647
+  code: 2
