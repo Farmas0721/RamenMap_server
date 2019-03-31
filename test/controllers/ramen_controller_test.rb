@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RamenStoreTest < ActiveSupport::TestCase
+class RamenControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
