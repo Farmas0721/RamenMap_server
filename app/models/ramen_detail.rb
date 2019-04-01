@@ -1,0 +1,3 @@
+class RamenDetail < ApplicationRecord
+
+end
