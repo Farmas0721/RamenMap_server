@@ -1,0 +1,36 @@
+<%= button_to "新規作成", {controller: 'ramen_stores', action: 'new'}, {method: :get, class:"btn btn-primary"} %>
+
+<div class="mx-auto">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">store_name</th>
+      <th scope="col">store_number</th>
+      <th scope="col">latitude</th>
+      <th scope="col">longitude</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @posts.each do |post| %>
+        <tr>
+          <th scope="row"><%= post.id %></th>
+          <td><%= link_to post.store_name, "ramen_stores/#{post.id}" %></td>
+          <td><%= post.store_number %></td>
+          <td><%= post.latitude %></td>
+          <td><%= post.longitude %></td>
+          <td><%= link_to "delete", "ramen_stores/#{post.id}", method: :delete, data: {confirm: "削除します"} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<% if @posts.count > 0 %>
+    <div class="d-flex justify-content-center mb-2">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+<% else %>
+    <h1>データないよ</h1>
+<% end %>
